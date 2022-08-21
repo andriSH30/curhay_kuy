@@ -1,28 +1,36 @@
 import { Outlet } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-import './Navigation.style.scss';
+import CustomButton from "../button/CustomButton.component";
+
+import "./Navigation.style.scss";
 
 const Navigation = () => {
-    return(
-        <>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav>
-                    <Nav.Link href="#deets">More deets</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
-                    Dank memes
-                    </Nav.Link>
-                </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-        <Outlet />
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar collapseOnSelect expand="lg" className="custom-navbar">
+        <Container>
+          <Navbar.Brand href="#home" className="brand-name">
+            Curhat Kuy
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav>
+              <CustomButton
+                ButtonText="Masuk"
+                ButtonType="primary"
+                ButtonSize="small"
+              />
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <Outlet />
+    </>
+  );
+};
 
 export default Navigation;

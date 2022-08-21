@@ -1,0 +1,58 @@
+
+
+.primary-button {
+    width: fit-content;
+
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    background-color: var(--third-bg-color);
+    border: 2px solid var(--third-bg-color);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    color: var(--third-bg-color);
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.primary-button-inverse {
+    width: fit-content;
+
+    color: var(--third-bg-color);
+    font-weight: 700;
+
+    background-color: transparent;
+    border: 2px solid var(--third-bg-color);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.primary-button-inverse:hover {
+    color: var(--white);
+    background-color: var(--third-bg-color);
+    transition: 0.3s;
+}
+
+.button-small {
+    padding: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.button-medium {
+    font-size: 18px;
+    padding: 12px;
+    letter-spacing: 2px;
+}
+
+.button-large {
+    font-size: 22px;
+    padding: 14px;
+    letter-spacing: 3px;
+}
